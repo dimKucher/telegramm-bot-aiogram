@@ -1,0 +1,39 @@
+[tool.black]
+line_length = 88
+target-version = ['py311']
+
+
+[tool.isort]
+line_length = 88
+py_version = 311
+profile = "black"
+multi_line_output = 3
+skip = [".vevns/", ".pytest_cache", ".static/", "._json_example/"]
+force_grid_wrap = 0
+skip_gitignore = true
+
+
+
+#[tool.flake8]
+#max-line-length = 88
+#exclude = ".venv,__pycache__,migrations,src/core/config.py"
+#ignore = "E501, E231, E241, B008, Q000, WPS305, WPS336, WPS421, C812, WPS404, F401, F405, E203, E266, E501, W503"
+#per-file-ignores = "__init__.py: F401"
+#inline-quotes = ""
+
+
+[tool.mypy]
+python_version = "3.11"
+plugins = ["pydantic.mypy"]
+strict = true
+follow_imports = "silent"
+allow_untyped_calls= true
+disallow_untyped_defs = true
+disable_error_code = ["attr-defined", "union-attr", "no-untyped-def", "arg-type", "no-any-return", "type-arg", "misc", "from src.utils.cache_key import"]
+ignore_missing_imports = true
+cache_dir = ".cache/mypy_cache"
+exclude = [
+    "src/core/config.py",
+    "src/static",
+    "venvs/",
+]

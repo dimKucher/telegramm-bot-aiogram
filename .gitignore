@@ -1,0 +1,15 @@
+/.idea/
+/venv/
+/cache/*
+/.env
+/.env.docker
+/__pycache__/
+/_json_example/
+
+/src/static/products/
+/src/static/graph/graph_*.png
+
+*.log
+*.pyc
+
+/_utils.py
