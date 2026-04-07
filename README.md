@@ -1,23 +1,42 @@
-# Телеграм-бот для работы с API интернет-магазина `AliExpress`
+<div align="center">
+  
+# 🤖 AliExpress Telegram Search Bot
 
-Дипломная работа по модулю "Основы Python".
+**Асинхронный Telegram‑бот для поиска товаров на AliExpress с избранным, историей и мониторингом цен**
 
-Телеграм-бот по поиску товаров на интернет площадке. А также добавление товаров в 'избранное' и отслеживания цен. 
+[![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python&logoColor=white)](https://www.python.org/)
+[![aiogram](https://img.shields.io/badge/aiogram-3.x-00a98f?logo=telegram&logoColor=white)](https://docs.aiogram.dev/)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15-4169e1?logo=postgresql&logoColor=white)](https://www.postgresql.org/)
+[![Redis](https://img.shields.io/badge/Redis-7.0-dc382d?logo=redis&logoColor=white)](https://redis.io/)
+[![Docker](https://img.shields.io/badge/Docker-24.0-2496ed?logo=docker&logoColor=white)](https://www.docker.com/)
+[![Peewee](https://img.shields.io/badge/Peewee-ORM-ffb3b3?logo=python&logoColor=white)](http://docs.peewee-orm.com/)
+[![RapidAPI](https://img.shields.io/badge/RapidAPI-Aliexpress-00acec?logo=api&logoColor=white)](https://rapidapi.com/)
 
-## 1. Функциональные возможности приложения:
-1. Пользователь может искать товары по названию, задавать диапазон цен, сортировать результат поиска.
-2. Пользователь может добавлять и удалять товары в `избранное`.
-3. Пользователь может видеть историю просмотренных товаров.
-4. Пользователь может добавить товар в список по мониторингу цен.
-5. Пользователь может задать порог цены, при котором бот отправит сообщение о приемлемой цене.
+</div>
 
-## 2. В дипломе использовались следующие библиотеки:
-* **aiogram** - для создания Telegram-бота. 
-* **Postgres** - СУБД для работы с БД.
-* **peewee** - библиотека для работы с СУБД.
-* **playhouse** - для работы с миграциями.
-* **redis** - для хранения с кэшируемыми данными.
-* **Docker** - для развёртывания приложения в контейнере
+
+
+### Основные возможности
+
+- 🔍 **Поиск товаров** по названию, диапазону цен, сортировка результатов.
+- ⭐ **Избранное** – добавление / удаление товаров.
+- 📜 **История просмотренных товаров**.
+- 📊 **Мониторинг цен** – задание пороговой цены и получение уведомлений.
+- 📈 **График изменения цены** отслеживаемого товара.
+
+## 🛠️ Технологии
+
+| Категория       | Технологии                                                                 |
+|-----------------|----------------------------------------------------------------------------|
+| Язык            | Python 3.10+                                                               |
+| Бот‑фреймворк   | aiogram 3.x                                                                |
+| База данных     | PostgreSQL (через Peewee ORM + playhouse миграции)                         |
+| Кэширование     | Redis                                                                      |
+| Контейнеризация | Docker, Docker Compose                                                     |
+| API             | RapidAPI (Aliexpress DataHub)                                              |
+| Логирование     | Встроенный logging (info.log, error.log)                                   |
+
+---
 
 ## 3. Структура проекта
 
